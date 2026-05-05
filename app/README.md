@@ -7,6 +7,8 @@ Starter technique de la formation Coda. Service Node.js minimal pour pratiquer P
 - `/` — réponse JSON simple
 - `/health` — healthcheck HTTP, utile pour les probes de plateforme (Render / Fly / etc.)
 - `/metrics` — métriques au format texte
+- `/hello` - sanity testo
+
 
 ## Commandes
 
