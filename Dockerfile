@@ -1,7 +1,7 @@
 FROM node:20-alpine AS test
 WORKDIR /app
 COPY app/package*.json ./
-RUN cd app && npm ci
+RUN npm ci
 COPY app/src ./src
 COPY app/test ./test
 RUN npm test
@@ -10,7 +10,7 @@ FROM node:20-alpine AS production
 WORKDIR /app
 ENV NODE_ENV=production
 COPY app/package*.json ./
-RUN cd app && npm ci --omit=dev
+RUN npm ci --omit=dev
 COPY app/src ./src
 USER node
 EXPOSE 3000
